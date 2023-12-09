@@ -58,3 +58,23 @@ print(kolory)
 
 liczby = list(set(liczby))
 print(liczby)
+
+#słownik
+osoba = {
+    "imię":"Jan",
+    "nazwisko":"Kowal",
+    "miasto":"Toruń",
+    "wiek":45,
+    888:12345
+}
+
+print(osoba)
+print(osoba["miasto"])
+print(osoba[888])
+
+osoba["kolor oczu"] = "piwne"
+print(osoba)
+
+print(osoba.keys())
+print(osoba.values())
+print(osoba.items())
