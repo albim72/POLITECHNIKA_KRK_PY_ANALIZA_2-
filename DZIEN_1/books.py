@@ -50,3 +50,23 @@ print("druga wersja wydania: (zmiana oprawy)")
 b1.oprawa = "twarda"
 print(f"zmieniono oprawę książki na typ - {b1.oprawa} z dodatkiem: {b1.dodatek}")
 b1.print_book()
+
+class Encyklopedia(Book):
+    def __init__(self, id, tytul, autor, liczba_tom, cena=30):
+        super().__init__(id, tytul, autor, cena)
+        self.liczba_tom = liczba_tom
+
+    def tomy(self):
+        return f'liczba tomów encyklopedii: {self.liczba_tom}'
+
+    def rabat(self, procent):
+        return super().rabat(procent)*1.2
+
+
+print("_"*50)
+e1 = Encyklopedia(567,"Encykopedia Sportu","Jan Kot",3,150)
+e1.setcena(177)
+e1.oprawa="twarda"
+e1.print_book()
+print(f'rabat od ceny {e1.getcena()} zł wynosi: {e1.rabat(12):.2f} zł')
+print(f"zmieniono oprawę książki na typ - {e1.oprawa} z dodatkiem: {e1.dodatek}")
