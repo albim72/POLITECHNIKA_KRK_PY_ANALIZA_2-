@@ -51,3 +51,11 @@ def dodaj(x):
 
 dziewiec = list(map(dodaj,num))
 print(dziewiec)
+
+#zbuduj listę, która będzie się składała z wartości całkowitych z przedziału [1,100000],
+#każda wartość to będzie wartość z przedziału podniesiona do potęgu drugiej
+#list comprehension
+
+kwadraty = [i**2 for i in range(1,1000000)]
+print(kwadraty)
+
