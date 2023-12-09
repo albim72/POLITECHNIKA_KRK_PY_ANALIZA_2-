@@ -59,3 +59,19 @@ print(dziewiec)
 kwadraty = [i**2 for i in range(1,1000000)]
 print(kwadraty)
 
+#przykład 3
+def witaj(imie):
+    return f'Miło Cię widzieć {imie}'
+
+def konkurs(imie,punkty,zaliczone):
+    return f'uczestnik konkursu: {imie}, liczba punktów: {punkty}, czy zaliczone? {zaliczone}'
+
+def fx(a,b):
+    return a-b/2
+def osoba(funkcja,*args):
+    return funkcja(*args)
+
+print(osoba(witaj,"Leon"))
+print(osoba(konkurs,"Anna",78,"tak"))
+print(osoba(fx,5,6))
+
