@@ -43,3 +43,18 @@ print(miasta)
 print(type(miasta))
 print(miasta[2:5])
 print(miasta.count("Kraków"))
+
+#zbiór
+
+kolory = {"zielony","niebieski","biały","czarny","czerwony","biały"}
+print(kolory)
+print(kolory)
+print(kolory)
+
+kolory.add("pomarańczowy")
+print(kolory)
+kolory.update(["fioletowy","magenta","szary"])
+print(kolory)
+
+liczby = list(set(liczby))
+print(liczby)
