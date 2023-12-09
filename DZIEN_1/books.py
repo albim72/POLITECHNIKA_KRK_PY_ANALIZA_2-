@@ -5,6 +5,7 @@ class Book:
         self.autor = autor
         self.cena = cena
         self.oprawa = "miękka"
+        self.dodatek = "brak"
         self.create_book()
 
     def create_book(self):
@@ -16,8 +17,36 @@ class Book:
     def rabat(self,procent):
         return self.cena*procent/100
 
+    def getcena(self):
+        return self.cena
+
+    def setcena(self,nowacena):
+        self.cena = nowacena
+
+    @property
+    def oprawa(self):
+        return self._oprawa
+
+    @property
+    def dodatek(self):
+        return self._dodatek
+
+    @dodatek.setter
+    def dodatek(self,nowydodatek):
+        self._dodatek = nowydodatek
+    @oprawa.setter
+    def oprawa(self,nowaoprawa):
+        self._oprawa = nowaoprawa
+        if nowaoprawa == "twarda":
+            self.dodatek = "obwoluta"
+
 
 
 b1 = Book(45,"Wiedźmin","Andrzej Sapkowski")
+b1.setcena(44)
 b1.print_book()
-print(f'rabat od ceny {b1.cena} zł wynosi: {b1.rabat(12)} zł')
+print(f'rabat od ceny {b1.getcena()} zł wynosi: {b1.rabat(12)} zł')
+print("druga wersja wydania: (zmiana oprawy)")
+b1.oprawa = "twarda"
+print(f"zmieniono oprawę książki na typ - {b1.oprawa} z dodatkiem: {b1.dodatek}")
+b1.print_book()
